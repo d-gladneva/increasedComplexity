@@ -1,8 +1,7 @@
 const num = 266219;
 
-const space = '';
 let comp = 1;
-numArr = num.toString().split(space);
+numArr = num.toString().split('');
 
 console.log(numArr);
 
@@ -12,8 +11,10 @@ for (let i = 0; i < numArr.length; i++) {
 
 console.log('Произведение цифр числа равно:', comp);
 
-compPow = comp**3;
+compPow = comp ** 3;
 
-console.log(compPow);
+compPowArr = compPow.toString().split('');
 
-console.log('Первые две цифры числа:', numArr[0],numArr[1],);
+for (let i = 0; i < 2; i++) {
+    console.log(compPowArr[i]);
+}
