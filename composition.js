@@ -11,10 +11,7 @@ for (let i = 0; i < numArr.length; i++) {
 
 console.log('Произведение цифр числа равно:', comp);
 
-compPow = comp ** 3;
+compPow = String(comp ** 3);
 
-compPowArr = compPow.toString().split('');
+console.log(compPow.substring(0,2));
 
-for (let i = 0; i < 2; i++) {
-    console.log(compPowArr[i]);
-}
