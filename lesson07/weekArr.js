@@ -1,22 +1,21 @@
-let week = ['пн\n', 'вт\n', 'ср\n', 'чт\n', 'пт\n', 'сб\n', 'вск\n'];
+let week = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вск'];
+
 toDay = new Date().getDay() - 1;
 
-const addWeek = function() {
+const addWeek = function (week) {
 
     for (let i = 0; i < 7; i++) {
 
         if (i === toDay) {
             if (week[i] === 'сб' || week[i] === 'вск') {
-                week[i].classList.add('italics');
-            } else week[i].classList.add('bold');
+                document.write(`<p><b>${week[i]}</b></p>`);
+            } else document.write(`<p><i>${week[i]}</i></p>`);
         } else if (week[i] === 'сб' || week[i] === 'вск') {
-            week[i].classList.add('italics');
+            document.write(`<p><b>${week[i]}</b></p>`);
         } else {
-            week[i].classList.add('bold');
+            document.write(`<p><i>${week[i]}</i></p>`);
         }
     }
 };
 
-addWeek();
-
-console.log(addWeek);
+addWeek(week);
