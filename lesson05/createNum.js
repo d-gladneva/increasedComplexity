@@ -12,7 +12,7 @@ console.log(arrNum);
 
 
 const checkPrimeNum = function () {
-    for (let i = 2; i <= 10; i++) {
+    for (let i = 2; i <= 100; i++) {
         let primeNum = true;
         for (let j = 2; j <= i; j++) {
             if (i % j === 0 && i !== j) {
@@ -23,7 +23,7 @@ const checkPrimeNum = function () {
             }
         }
         if (primeNum) {
-            console.log(i + ' Делители этого числа: ' + 1 + ';'+ i);
+            console.log(i + ' Делители этого числа: ' + 1 + ' '+ i);
         }
     }
 };
